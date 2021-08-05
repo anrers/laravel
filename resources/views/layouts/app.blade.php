@@ -10,6 +10,9 @@
     <body>
         <div class="container mt-5">
             @include('inc.header')
+            @if(request()->is('about'))
+                @include('inc.hero')
+            @endif
             <div class="row">
                 <div class="col-8">
                     @yield('content')
