@@ -4,8 +4,8 @@
         <span class="fs-4">Study</span>
     </a>
     <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/">Main</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/about">About</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/contact">Contact</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{{ route('home') }}">Main</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{{ route('about') }}">About</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{{ route('contact') }}">Contact</a>
     </nav>
 </div>
