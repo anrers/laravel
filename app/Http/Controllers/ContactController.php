@@ -18,6 +18,8 @@ class ContactController extends Controller
     }
 
     public function allData(){
+        $contact = Contact::all();
 
+        return view('messages', ['data' => $contact]);
     }
 }
