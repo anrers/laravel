@@ -8,7 +8,7 @@
             <p><small>
                     {{$mess->name}}
                 </small></p>
-            <a href="#">
+            <a href="{{ route('contact-data-one', $mess->id) }}">
                 <button class="btn btn-warning">Редактировать</button>
             </a>
         </div>
