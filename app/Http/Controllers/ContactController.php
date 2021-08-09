@@ -16,4 +16,8 @@ class ContactController extends Controller
 
         return redirect()->route('contact')->with('success', 'Form add');
     }
+
+    public function allData(){
+
+    }
 }

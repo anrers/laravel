@@ -7,5 +7,6 @@
         <a class="me-3 py-2 text-dark text-decoration-none" href="{{ route('home') }}">Main</a>
         <a class="me-3 py-2 text-dark text-decoration-none" href="{{ route('about') }}">About</a>
         <a class="me-3 py-2 text-dark text-decoration-none" href="{{ route('contact') }}">Contact</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{{ route('contact-data') }}">Messages</a>
     </nav>
 </div>
