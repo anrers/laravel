@@ -31,12 +31,12 @@ class BlogPostFactory extends Factory
             'title'=> $title,
             'slug' => \Illuminate\Support\Str::slug($title),
             'excerpt' => $this->faker->realText(rand(40, 100)),
-            'content_row' => $text,
+            'content_raw' => $text,
             'content_html' => $text,
             'is_published' => $isPublished,
             'published_at' => $isPublished ? $this->faker->dateTimeBetween('-2 months' , '-1 days') : null,
             'created_at' => $date,
-            'update_at' => $date,
+            'updated_at' => $date,
         ];
     }
 }
