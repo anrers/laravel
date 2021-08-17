@@ -25,3 +25,4 @@ composer.phar
 /.idea/
 .htaccess
 _ide_helper.php
+/.phpstorm.meta.php
