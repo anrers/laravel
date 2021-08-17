@@ -14,12 +14,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->intended(RouteServiceProvider::HOME);
-});
+Route::get('/',
+    function () {
+        return redirect()->intended(RouteServiceProvider::HOME);
+    });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard',
+    function () {
+        return view('dashboard');
+    })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+Route::group([
+    'namespace' => 'App\Http\Controllers\Blog\Admin',
+    'prefix'    => 'admin/blog',
+],
+    function () {
+        $methods = [
+            'index',
+            'edit',
+            'store',
+            'update',
+            'create',
+        ];
+        Route::resource('categories', CategotryController::class)
+            ->middleware(['auth'])
+            ->only($methods)
+            ->names('blog.admin.categories');
+    });
+
+require __DIR__ . '/auth.php';
